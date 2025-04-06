@@ -49,6 +49,27 @@ cd investment-market
 # Navigate to the backend directory
 cd backend
 
+# Add a .env
+DB_URL=
+PORT="3000"
+CLOUDINARY_CLOUD_NAME=""
+CLOUDINARY_API_KEY=""
+CLOUDINARY_API_SECRET=""
+
+# How to Get Cloudinary Credentials
+
+Go to https://cloudinary.com and sign up or log in.
+
+Once logged in, go to your Cloudinary Dashboard.
+
+Under Account Details, you’ll find the following:
+
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET
+
+Copy and paste these values into your .env file.
+
 # Install dependencies
 npm install  # or yarn install
 ```
