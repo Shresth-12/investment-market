@@ -5,7 +5,7 @@ import io from "socket.io-client";
 import { SendHorizonal } from "lucide-react";
 import Navbar from "../components/NavBar";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://investment-market-backend.onrender.com");
 
 const DealChat = () => {
   const { id } = useParams();
@@ -22,7 +22,7 @@ const DealChat = () => {
   async function Details(id)
   {
     try {
-      const user=await axios.get("http://localhost:3000/api/v1/user/details",{
+      const user=await axios.get("https://investment-market-backend.onrender.com/api/v1/user/details",{
         id
       })
       setUser(user)
@@ -37,7 +37,7 @@ const DealChat = () => {
     socket.emit("join-deal", id);
 
     axios
-      .get(`http://localhost:3000/api/v1/deal/deal/${id}`, {
+      .get(`https://investment-market-backend.onrender.com/api/v1/deal/deal/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -96,7 +96,7 @@ const DealChat = () => {
     });
 
     try {
-      await axios.post("http://localhost:3000/api/v1/deal/message", formData, {
+      await axios.post("https://investment-market-backend.onrender.com/api/v1/deal/message", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
