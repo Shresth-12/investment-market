@@ -20,7 +20,7 @@ const AdminDashboard = () => {
     const token = localStorage.getItem("token");
     const checkAdmin = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/admin/check", {
+        const res = await axios.get("https://investment-market-backend.onrender.com/api/v1/admin/check", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.data.admin) setIsAdmin(true);
@@ -36,7 +36,7 @@ const AdminDashboard = () => {
     const token = localStorage.getItem("token");
     const fetchStats = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/admin/user-stats", {
+        const res = await axios.get("https://investment-market-backend.onrender.com/api/v1/admin/user-stats", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setDealStats(res.data.dealStats);
