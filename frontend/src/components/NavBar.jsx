@@ -12,7 +12,7 @@ const Navbar = () => {
       if (!token) return;
 
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/admin/check", {
+        const res = await axios.get("https://investment-market-backend.onrender.com/api/v1/admin/check", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
