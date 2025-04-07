@@ -11,7 +11,7 @@ const token=localStorage.getItem('token')
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3000/api/v1/deal/deal", form, {
+    await axios.post("https://investment-market-backend.onrender.com/api/v1/deal/deal", form, {
       headers: { Authorization: `Bearer ${token}` },
     });
     navigate("/seller");
