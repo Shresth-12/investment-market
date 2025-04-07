@@ -9,7 +9,7 @@ const BuyerDashboard = () => {
   const navigate = useNavigate();
 
   const fetchDeals = async () => {
-    const res = await axios.get("http://localhost:3000/api/v1/deal/deals", {
+    const res = await axios.get("https://investment-market-backend.onrender.com/api/v1/deal/deals", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
     setDeals(res.data);
@@ -18,7 +18,7 @@ const BuyerDashboard = () => {
   const handleAction = async (id, action) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/v1/deal/${action}/${id}`,
+        `https://investment-market-backend.onrender.com/api/v1/deal/${action}/${id}`,
         {},
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
