@@ -11,7 +11,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3000/api/v1/user/signup", form);
+    const res = await axios.post("https://investment-market-backend.onrender.com/api/v1/user/signup", form);
     localStorage.setItem("token", res.data.token);
     localStorage.setItem("role", form.role);
     navigate(form.role === "seller" ? "/seller" : "/buyer");
