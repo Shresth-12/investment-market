@@ -10,7 +10,7 @@ const SellerDashboard = () => {
 
   useEffect(() => {
     const fetchDeals = async () => {
-      const res = await axios.get("http://localhost:3000/api/v1/deal/deals", {
+      const res = await axios.get("https://investment-market-backend.onrender.com/api/v1/deal/deals", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       const sellerId = JSON.parse(atob(localStorage.getItem("token").split('.')[1])).userId;
