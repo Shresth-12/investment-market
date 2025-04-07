@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // <-- updated
 import axios from "axios";
 import Button from "../components/Button";
 import { LogIn } from "lucide-react";
@@ -54,6 +54,14 @@ const Login = () => {
         <Button className="w-full flex items-center justify-center">
           <LogIn className="mr-2" /> Login
         </Button>
+
+        {/* Register link */}
+        <p className="text-sm text-center text-gray-600">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-blue-500 hover:underline">
+            Register here
+          </Link>
+        </p>
       </form>
     </div>
   );

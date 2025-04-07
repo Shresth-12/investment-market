@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { UserPlus, Mail, Lock } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { UserPlus } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom"; // <-- updated import
 
 const Register = () => {
   const [form, setForm] = useState({ fullName: "", email: "", password: "", role: "buyer" });
@@ -31,6 +31,14 @@ const Register = () => {
           <option value="seller">Seller</option>
         </select>
         <button className="btn">Register</button>
+
+        {/* Login link */}
+        <p className="text-sm text-center text-gray-600">
+          Already have an account?{" "}
+          <Link to="/login" className="text-blue-500 hover:underline">
+            Login here
+          </Link>
+        </p>
       </form>
     </div>
   );

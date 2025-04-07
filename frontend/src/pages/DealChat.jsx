@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import io from "socket.io-client";
 import { SendHorizonal } from "lucide-react";
+import Navbar from "../components/NavBar";
 
 const socket = io("http://localhost:3000");
 
@@ -113,6 +114,7 @@ const DealChat = () => {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
+      <Navbar/>
       <h1 className="text-2xl font-bold mb-4">💬 Deal Chat</h1>
 
       <div className="border rounded-lg p-4 h-[60vh] overflow-y-auto space-y-3 bg-white shadow-sm">

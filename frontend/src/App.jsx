@@ -6,6 +6,7 @@ import BuyerDashboard from "./pages/BuyerDashboard";
 import SellerDashboard from "./pages/SellerDashboard";
 import CreateDeal from "./pages/SellerCreateDeal";
 import DealChat from "./pages/DealChat";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const App = () => {
   const token = localStorage.getItem("token");
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/seller/create" element={<CreateDeal />} />
         <Route path="/buyer" element={<BuyerDashboard />} />
         <Route path="/deal/:id" element={<DealChat />} />
+        <Route path="/admin" element={<AdminDashboard/>} />
       </Routes>
     </Router>
   );

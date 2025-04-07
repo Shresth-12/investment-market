@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/NavBar";
 
 const SellerCreateDeal = () => {
   const [form, setForm] = useState({ title: "", description: "", price: "" });
